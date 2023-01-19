@@ -74,6 +74,30 @@
     align-items: center;
     column-gap: .25rem;
     transition: .3s;
+    font-weight: $--font-medium;
 }
 
+.nav__logo i{
+    font-size: 1rem;
+}
+
+.nav__logo:hover {
+    color: $--first-color;
+}
+
+@media screen and (max-width: 1023px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 2rem;
+        background-color: $--container-color;
+        box-shadow: 0 8px 24px hsla(228, 66%, 45%, .15);
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 1.30rem 3rem;
+        border-radius: 1.25rem;
+        transition: .4s;
+    }
+}
 </style>
