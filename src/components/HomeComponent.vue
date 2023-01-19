@@ -14,6 +14,35 @@
                     <input type="search" placeholder="Search by location" class="home__search-input">
                     <button class="button">Search</button>
                 </form>
+
+                <div class="home__value">
+                    <div>
+                        <h1 class="home__value-number">
+                            9k <span>+</span>
+                        </h1>
+                        <span class="home__value-description">
+                            Premium <br> Product
+                        </span>
+                    </div>
+
+                    <div>
+                        <h1 class="home__value-number">
+                            2k <span>+</span>
+                        </h1>
+                        <span class="home__value-description">
+                            Happy <br> Customer
+                        </span>
+                    </div>
+
+                    <div>
+                        <h1 class="home__value-number">
+                            28k <span>+</span>
+                        </h1>
+                        <span class="home__value-description">
+                            Awards <br> Winning
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
