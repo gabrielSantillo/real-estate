@@ -30,6 +30,6 @@ html {
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: $--body-font;
 }
 </style>
