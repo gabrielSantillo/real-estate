@@ -1,0 +1,79 @@
+<template>
+    <div class="header" ref="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Real Estate <i class='bx bxs-home-alt-2'></i>
+            </a>
+
+            <div class="nav__menu">
+                <ul class="clas__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home-alt-2' ></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-building-house' ></i>
+                            <span>Residences</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-award' ></i>
+                            <span>Value</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-phone' ></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" class="button nav__button">
+                Subscribe
+            </a>
+        </nav>
+    </div>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: $--z-fixed;
+    transition: .4s;
+}
+
+.nav {
+    height: $--header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    // color: #fff;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    transition: .3s;
+}
+
+</style>
