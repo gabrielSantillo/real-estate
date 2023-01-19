@@ -98,6 +98,21 @@ input, button {
     background: linear-gradient(101deg,
                 hsl(228, 66%, 53%),
                 hsl(228, 66%, 47%));
-    
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: .5rem;
+    font-size: $--normal-font-size;
+    font-weight: $--font-medium;
+    box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0 4px 12px hsla(238, 77%, 55%, .5);;
+}
+
+.nav__button {
+  display: none;
 }
 </style>
