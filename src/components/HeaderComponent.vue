@@ -6,7 +6,7 @@
             </a>
 
             <div class="nav__menu">
-                <ul class="clas__list">
+                <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
                             <i class='bx bx-home-alt-2' ></i>
@@ -98,6 +98,27 @@
         padding: 1.30rem 3rem;
         border-radius: 1.25rem;
         transition: .4s;
+    }
+
+    .nav__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link {
+        color: $--text-color;
+        display: flex;
+        padding: .5rem;
+        border-radius: 50%;
+    }
+
+    .nav__link i{
+        font-size: 1.25rem;
+    }
+
+    .nav__link span{
+        display: None;
     }
 }
 </style>
