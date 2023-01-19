@@ -138,4 +138,33 @@
     font-size: $--smaller-font-size;
 }
 
+.home__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.home__orbe {
+    width: 265px;
+    height: 284px;
+    background: linear-gradient(180deg,
+                hsl(0, 0%, 16%) 93%,
+                hsl(0, 0%, 67%) 100%);
+    border-radius: 135px 135px 0 0;
+}
+
+.home__img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 125px 125px 12px 12px;
+    display: inline-flex;
+    align-items: flex-end;
+    bottom: -1.5rem;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+
+
 </style>

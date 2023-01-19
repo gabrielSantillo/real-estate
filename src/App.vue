@@ -93,5 +93,11 @@ input, button {
   overflow: hidden;
 }
 
-
+.button {
+    display: inline-block;
+    background: linear-gradient(101deg,
+                hsl(228, 66%, 53%),
+                hsl(228, 66%, 47%));
+    
+}
 </style>
