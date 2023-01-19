@@ -44,6 +44,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="home__images">
+                <div class="home__orbe"></div>
+
+                <div class="home__img">
+                    <img src="@/img/home.jpg" alt="">
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -55,5 +63,79 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/variables.scss';
+
+.home {
+    background: linear-gradient(170deg,
+                hsl(0, 0%, 22%) 0%,
+                hsl(0, 0%, 6%) 30%);
+    padding-bottom: 0;
+}
+
+.home__container {
+    padding-top: 4rem;
+    row-gap: 3.5rem;
+}
+
+.home__title, .home__value-number {
+    color: #fff;
+}
+
+.home__title {
+    font-size: $--biggest-font-size;
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+}
+
+.home__description {
+    color: $--text-color-light;
+    margin-bottom: 2rem;
+}
+
+.home__search {
+    background-color: $--body-color;
+    padding: .35rem .35rem .35rem .75rem;
+    display: flex;
+    align-items: center;
+    border-radius: .75rem;
+    border: 3px solid $--text-color-light;
+    margin-bottom: 2rem;
+}
+
+.home__search i {
+    font-size: 1.25rem;
+    color: $--first-color;
+}
+
+.home__search-input {
+    width: 90%;
+    background-color: $--body-color;
+    color: $--text-color;
+    margin: .5rem .5rem;
+}
+
+.home__search-input::placeholder {
+    color: $--text-color-light;
+}
+
+.home__value {
+    display: flex;
+    column-gap: 2.5rem;
+}
+
+.home__value-number {
+    font-size: $--h1-font-size;
+    font-weight: $--font-medium;
+}
+
+.home__value-number span {
+    color: $--second-color;
+}
+
+.home__value-description {
+    display: flex;
+    color: $--text-color-light;
+    font-size: $--smaller-font-size;
+}
 
 </style>

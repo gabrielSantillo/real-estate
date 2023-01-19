@@ -69,7 +69,7 @@
 }
 
 .nav__logo {
-    // color: #fff;
+    color: #fff;
     display: inline-flex;
     align-items: center;
     column-gap: .25rem;
