@@ -31,5 +31,67 @@ html {
 
 body {
   font-family: $--body-font;
+  font-size: $--normal-font-size;
+  background-color: $--body-color;
+  color: $--text-color;
 }
+
+h1, h2, h3 {
+  color: $--title-color;
+  font-weight: $--font-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input, button {
+  font-family: $--body-font;
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: $--h2-font-size;
+  margin-bottom: 1rem;
+}
+
+.section__title span {
+  color: $--second-color;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: $--small-font-size;
+  color: $--second-color;
+}
+
+.main {
+  overflow: hidden;
+}
+
+
 </style>
