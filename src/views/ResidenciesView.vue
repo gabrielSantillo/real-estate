@@ -1,11 +1,13 @@
 <template>
     <div>
-        <h1>POPULAR</h1>
+        <residencies-component></residencies-component>
     </div>
 </template>
 
 <script>
+import ResidenciesComponent from '@/components/ResidenciesComponent.vue'
     export default {
+  components: { ResidenciesComponent },
         
     }
 </script>

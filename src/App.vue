@@ -1,11 +1,21 @@
 <template>
   <div id="app">
+    <header-component></header-component>
     <router-view/>
   </div>
 </template>
 
+<script>
+import HeaderComponent from './components/HeaderComponent.vue'
+    export default {
+  components: { HeaderComponent },
+        
+    }
+</script>
+
 <style lang="scss">
 @import '@/scss/variables.scss';
+
 
 @media screen and (min-width: 1024px) {
   :root {
