@@ -8,17 +8,14 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        
                         <a href="http://localhost:8080/#/" class="nav__link">
-                            
                             <i class='bx bx-home-alt-2' ></i>
                             <span>Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="http://localhost:8080/#/residencies" class="nav__link" @click="handleClick(this.$ref)">
-                            <router-link to="/residencies"></router-link>
+                        <a href="http://localhost:8080/#/residencies" class="nav__link">
                             <i class='bx bx-building-house' ></i>
                             <span>Residences</span>
                         </a>

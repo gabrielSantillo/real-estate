@@ -1,5 +1,14 @@
 <template>
-  <div class="section residencies" ref="popular"></div>
+  <div class="section popular residencies" ref="popular">
+    <div class="container">
+        <span class="section__subtitle">
+            Best Choice
+        </span>
+        <h2 class="section__title">
+            Popular Residencies
+        </h2>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -8,11 +17,4 @@ export default {};
 
 <style lang="scss" scoped>
 @import "@/scss/variables.scss";
-
-.residencies {
-  background: linear-gradient(170deg, 
-             hsl(0, 0%, 22%) 0%,   
-             hsl(0, 0%, 6%) 30%);
-  padding-bottom: 0;
-}
 </style>
