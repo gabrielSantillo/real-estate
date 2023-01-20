@@ -8,7 +8,7 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="http://localhost:8080/#/" class="nav__link">
+                        <a ref="home" class="nav__link" @click="scroll_me_to('home')">
                             <i class='bx bx-home-alt-2' ></i>
                             <span>Home</span>
                         </a>
@@ -47,6 +47,11 @@ import debounce from 'lodash/debounce';
 
     export default {
   methods: {
+    scrol_me_to(ref) {
+        let element = this.$ref[ref]
+        let top = element.offsetTop;
+        window.scrollTo(0, top)
+    },
     handleScroll() {
         
       if (window.scrollY >= 50) {
