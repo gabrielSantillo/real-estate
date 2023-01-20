@@ -25,8 +25,8 @@
                         </p>
                     </div>
                 </article>
-                                <article class="popular__card">
-                    <img src="@/img/popular1.jpg" alt="" class="popular__img">
+                    <article class="popular__card">
+                    <img src="@/img/popular2.jpg" alt="" class="popular__img">
 
                     <div class="popular__data">
                         <h2 class="popular__price">
@@ -41,7 +41,7 @@
                     </div>
                 </article>
                 <article class="popular__card">
-                    <img src="@/img/popular1.jpg" alt="" class="popular__img">
+                    <img src="@/img/popular3.jpg" alt="" class="popular__img">
 
                     <div class="popular__data">
                         <h2 class="popular__price">
@@ -56,7 +56,7 @@
                     </div>
                 </article>
                 <article class="popular__card">
-                    <img src="@/img/popular1.jpg" alt="" class="popular__img">
+                    <img src="@/img/popular4.jpg" alt="" class="popular__img">
 
                     <div class="popular__data">
                         <h2 class="popular__price">
@@ -71,7 +71,7 @@
                     </div>
                 </article>
                 <article class="popular__card">
-                    <img src="@/img/popular1.jpg" alt="" class="popular__img">
+                    <img src="@/img/popular5.jpg" alt="" class="popular__img">
 
                     <div class="popular__data">
                         <h2 class="popular__price">
@@ -105,6 +105,50 @@ export default {};
   padding-bottom: 0;
 }
 
+.popular__container {
+    padding: 1rem 0 5rem;
+}
 
+.popular__card {
+    width: 290px;
+    background-color: $--container-color;
+    padding-bottom: 1.5rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    transition: .4s;
+    margin-bottom: 2rem;
+}
 
+.popular__img {
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 1rem;
+}
+
+.popular__data {
+    padding: 0 1rem 0 1rem;
+}
+
+.popular__price {
+    font-size: $--h2-font-size;
+    color: $--text-color;
+    margin-bottom: .25rem;
+}
+
+.popular__price span{
+    color: $--second-color;
+}
+
+.popular__title {
+    font-size: $--h3-font-size;
+    margin-bottom: .75rem;
+}
+
+.popular__description {
+    font-size: $--small-font-size;
+}
+
+.popular__card:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
 </style>
