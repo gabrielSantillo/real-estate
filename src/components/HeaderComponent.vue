@@ -8,26 +8,26 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a ref="home" class="nav__link" @click="scroll_me_to('home')">
+                        <a class="nav__link" @click="go_to('')">
                             <i class='bx bx-home-alt-2' ></i>
                             <span>Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="http://localhost:8080/#/residencies" class="nav__link">
+                        <a class="nav__link" @click="go_to('residencies')">
                             <i class='bx bx-building-house' ></i>
                             <span>Residences</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="http://localhost:8080/#/values" class="nav__link">
+                        <a class="nav__link" @click="go_to('value')">
                             <i class='bx bx-award' ></i>
                             <span>Value</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="http://localhost:8080/#/contact" class="nav__link">
+                        <a class="nav__link" @click="go_to('contact')">
                             <i class='bx bx-phone' ></i>
                             <span>Contact</span>
                         </a>
@@ -47,10 +47,8 @@ import debounce from 'lodash/debounce';
 
     export default {
   methods: {
-    scrol_me_to(ref) {
-        let element = this.$ref[ref]
-        let top = element.offsetTop;
-        window.scrollTo(0, top)
+    go_to(ref) {
+        this.$router.push(`/${ref}`);
     },
     handleScroll() {
         
