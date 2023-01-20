@@ -8,26 +8,29 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        
+                        <a href="http://localhost:8080/#/" class="nav__link">
+                            
                             <i class='bx bx-home-alt-2' ></i>
                             <span>Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="http://localhost:8080/#/residencies" class="nav__link" @click="handleClick(this.$ref)">
+                            <router-link to="/residencies"></router-link>
                             <i class='bx bx-building-house' ></i>
                             <span>Residences</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="http://localhost:8080/#/values" class="nav__link">
                             <i class='bx bx-award' ></i>
                             <span>Value</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="http://localhost:8080/#/contact" class="nav__link">
                             <i class='bx bx-phone' ></i>
                             <span>Contact</span>
                         </a>
