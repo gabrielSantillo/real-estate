@@ -53,11 +53,15 @@
                 </div>
             </div>
         </div>
+
+        <logo-component></logo-component>
     </div>
 </template>
 
 <script>
+import LogoComponent from './LogoComponent.vue'
     export default {
+  components: { LogoComponent },
         
     }
 </script>
