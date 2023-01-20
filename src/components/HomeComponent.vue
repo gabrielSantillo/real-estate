@@ -165,6 +165,4 @@
     box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
-
-
 </style>

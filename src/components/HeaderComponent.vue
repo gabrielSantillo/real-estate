@@ -43,8 +43,30 @@
 </template>
 
 <script>
+import debounce from 'lodash/debounce';
+
     export default {
+  methods: {
+    handleScroll() {
         
+      if (window.scrollY >= 50) {
+        this.$refs.header.classList.add('scroll-header')
+      } else {
+        this.$refs.header.classList.remove('scroll-header')
+      }
+    }
+  },
+
+  mounted() {
+    this.handleDebouncedScroll = debounce(this.handleScroll, 50);
+    window.addEventListener('scroll', this.handleDebouncedScroll);
+  },
+
+  beforeDestroy() {
+    // I switched the example from `destroyed` to `beforeDestroy`
+    // to exercise your mind a bit. This lifecycle method works too.
+    window.removeEventListener('scroll', this.handleDebouncedScroll);
+  }
     }
 </script>
 
@@ -120,5 +142,18 @@
     .nav__link span{
         display: None;
     }
+}
+
+.nav__button {
+  display: none;
+}
+
+.scroll-header {
+    background-color: $--body-color;
+    box-shadow: 0 1px 4px hsla(228, 4%, 15%, .1);
+}
+
+.scroll-header .nav__logo{
+    color: $--first-color;
 }
 </style>

@@ -112,7 +112,5 @@ input, button {
   box-shadow: 0 4px 12px hsla(238, 77%, 55%, .5);;
 }
 
-.nav__button {
-  display: none;
-}
+
 </style>
