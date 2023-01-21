@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" @click="go_to('value')">
+                        <a class="nav__link" @click="go_to('values')">
                             <i class='bx bx-award' ></i>
                             <span>Value</span>
                         </a>
