@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ResidenciesView from '@/views/ResidenciesView.vue'
 import ValuesView from '@/views/ValuesView.vue'
+import ContactView from "@/views/ContactView.vue"
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [
   {
     path: '/values',
     component: ValuesView
+  },
+
+  {
+    path: '/contact',
+    component: ContactView
   }
 
 ]

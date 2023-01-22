@@ -22,7 +22,7 @@
 
                 <div class="value__accordion">
                     <div class="value__accordion-item">
-                        <header class="value__accordion-header" @click="is_active_one = !is_active_one">
+                        <header class="value__accordion-header" ref="one" @click="is_active_one = !is_active_one">
                             <i class='bx bxs-shield-x value__accordion-icon' ></i>
                             <h3 class="value__accordion-title">
                                 Best interest rates in the market
@@ -104,11 +104,6 @@
 
 <script>
     export default {
-        methods: {
-            toggle_button() {
-
-            }
-        },
         data() {
             return {
                 is_active_one: false,
