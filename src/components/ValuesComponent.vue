@@ -105,8 +105,8 @@
 <script>
     export default {
         methods: {
-            show() {
-                this.show_content = !this.show_content
+            toggle_button() {
+
             }
         },
         data() {
@@ -122,6 +122,12 @@
 
 <style lang="scss" scoped>
 @import '@/scss/variables.scss';
+
+.value {
+        background: linear-gradient(170deg,
+                hsl(0, 0%, 22%) 0%,
+                hsl(0, 0%, 6%) 30%);
+}
 
 .value__container {
     row-gap: 3rem;
