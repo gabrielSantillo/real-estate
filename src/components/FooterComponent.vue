@@ -107,5 +107,94 @@
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/variables.scss";
+
+.footer__container {
+    row-gap: 2.5rem;
+}
+
+.footer__logo {
+    color: $--first-color;
+    font-size: $--h3-font-size;
+    font-weight: $--font-semi-bold;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    margin-bottom: .75rem;
+}
+
+.footer__logo i {
+    font-size: 1.25rem;
+}
+
+.footer__description, .footer__link {
+    font-size: $--small-font-size;
+    font-weight: $--font-medium;
+}
+
+.footer__content, .footer__links {
+    display: grid;
+}
+
+.footer__content {
+    grid-template-columns: repeat(2, max-content);
+    gap: 2.5rem 4rem;
+}
+
+.footer__title {
+    font-size: $--h3-font-size;
+    margin-bottom: 1rem;
+}
+
+.footer__links {
+    row-gap: .5rem;
+}
+
+.footer__link {
+    color: $--text-color;
+    transition: .3s;
+}
+
+.footer__link:hover {
+    color: $--title-color;
+}
+
+.footer__social {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.footer__social-link {
+    font-size: 1.25rem;
+    color: $--text-color;
+    transition: .3s;
+}
+
+.footer__social-link:hover {
+    color: $--title-color;
+}
+
+.footer__info, .footer__privacy {
+    display: flex;
+}
+
+.footer__info {
+    padding-bottom: 6rem;
+    margin-top: 5.5rem;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1.5rem;
+}
+
+.footer__copy, .footer__privacy a {
+    font-size: $--smaller-font-size;
+    font-weight: $--font-medium;
+    color: $--text-color;
+}
+
+.footer__privacy {
+    justify-content: center;
+    column-gap: 1.25rem;
+}
 
 </style>
