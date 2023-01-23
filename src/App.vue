@@ -125,5 +125,19 @@ input, button {
   box-shadow: 0 4px 12px hsla(238, 77%, 55%, .5);;
 }
 
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: .5rem;
+  background-color: hsl(228, 8%, 76%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(228, 8%, 64%);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(228, 8%, 54%);
+}
 
 </style>
