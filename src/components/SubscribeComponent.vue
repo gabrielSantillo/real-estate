@@ -1,6 +1,14 @@
 <template>
-    <div>
-
+    <div class="subscribe section">
+        <div class="subscribe__container container">
+            <h1 class="subscribe__title">
+                Get Started with Real Estate
+            </h1>
+            <p class="subscribe__description">
+                Subscribe and find super attractive price quotes from us. Find your residence soon.
+            </p>
+            <a class="button subscribe__button">Get Started</a>
+        </div>
     </div>
 </template>
 
@@ -11,5 +19,36 @@
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/variables.scss";
+
+.subscribe__container {
+    background-color: $--first-color;
+    padding: 3rem 2rem;
+    border-radius: 1.25rem;
+    border: 6px solid $--first-color-light;
+    text-align: center;
+}
+
+.subscribe__title {
+    font-size: $--h2-font-size;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.subscribe__description {
+    color: hsl(228, 90%, 92%);
+    font-size: $--small-font-size;
+    margin-bottom: 2rem;
+}
+
+.subscribe__button {
+    border: 2px solid #fff;
+    background: $--first-color-light;
+    font-size: $--small-font-size;
+}
+
+.subscribe__button:hover {
+    background-color: $--first-color;
+}
 
 </style>

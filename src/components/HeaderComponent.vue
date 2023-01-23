@@ -35,7 +35,7 @@
                 </ul>
             </div>
 
-            <a href="#" class="button nav__button">
+            <a href="#" class="button nav__button" @click="go_to('subscribe')">
                 Subscribe
             </a>
         </nav>
