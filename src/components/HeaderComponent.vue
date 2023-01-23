@@ -49,6 +49,7 @@ import debounce from 'lodash/debounce';
   methods: {
     go_to(ref) {
         this.$router.push(`/${ref}`);
+        
     },
     handleScroll() {
         
@@ -63,6 +64,8 @@ import debounce from 'lodash/debounce';
   mounted() {
     this.handleDebouncedScroll = debounce(this.handleScroll, 50);
     window.addEventListener('scroll', this.handleDebouncedScroll);
+
+    
   },
 
   beforeDestroy() {
