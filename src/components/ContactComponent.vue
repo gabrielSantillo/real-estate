@@ -149,8 +149,9 @@
 
 .contact__card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem .75rem;
+    grid-template-columns: repeat(1, 180px);
+    row-gap: 1.25rem;
+    justify-content: center;
 }
 
 

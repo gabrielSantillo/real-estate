@@ -140,4 +140,19 @@ input, button {
   background-color: hsl(228, 8%, 54%);
 }
 
+@media screen and (max-width: 375px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .section {
+    padding: 3.5rem 0 1rem;
+  }
+
+  .home {
+    padding-bottom: 0;
+  }
+}
+
 </style>
