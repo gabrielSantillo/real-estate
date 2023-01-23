@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import ResidenciesView from '@/views/ResidenciesView.vue'
 import ValuesView from '@/views/ValuesView.vue'
 import ContactView from "@/views/ContactView.vue"
+import SubscribeView from '@/views/SubscribeView.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
   {
     path: '/contact',
     component: ContactView
+  },
+
+  {
+    path: '/subscribe',
+    component: SubscribeView
   }
 
 ]

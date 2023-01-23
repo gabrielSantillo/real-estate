@@ -202,7 +202,7 @@
 }
 
 .contact__card-box:hover {
-    box-shadow: 0 8px 24px hsla(288, 66%, 45%, .1);
+    box-shadow: 0 8px 24px rgba(247, 245, 248, 0.1);
 }
 
 </style>
