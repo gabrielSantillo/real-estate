@@ -8,26 +8,26 @@
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__link" @click="go_to('')">
+                        <a class="nav__link active-link" ref="home" @click="go_to('')">
                             <i class='bx bx-home-alt-2' ></i>
                             <span>Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a class="nav__link" @click="go_to('residencies')">
+                        <a class="nav__link" ref="residencies" @click="go_to('residencies')">
                             <i class='bx bx-building-house' ></i>
                             <span>Residences</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" @click="go_to('values')">
+                        <a class="nav__link" ref="values" @click="go_to('values')">
                             <i class='bx bx-award' ></i>
                             <span>Value</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" @click="go_to('contact')">
+                        <a class="nav__link" ref="contact" @click="go_to('contact')">
                             <i class='bx bx-phone' ></i>
                             <span>Contact</span>
                         </a>
@@ -44,12 +44,20 @@
 
 <script>
 import debounce from 'lodash/debounce';
+import cookies from "vue-cookies"
 
     export default {
   methods: {
     go_to(ref) {
         this.$router.push(`/${ref}`);
-        
+        if (ref === "") {
+            cookies.set('ref', `home`)
+        } else {
+            cookies.set('ref', `${ref}`)
+        }
+
+        location.reload()
+
     },
     handleScroll() {
         
@@ -65,7 +73,19 @@ import debounce from 'lodash/debounce';
     this.handleDebouncedScroll = debounce(this.handleScroll, 50);
     window.addEventListener('scroll', this.handleDebouncedScroll);
 
-    
+    let ref = cookies.get('ref')
+    if(ref === "home") {
+        this.$refs.home.classList.add('active-link')
+    } else if(ref === "residencies") {
+        this.$refs.home.classList.remove('active-link')
+        this.$refs.residencies.classList.add('active-link')
+    } else if(ref === "values") {
+        this.$refs.home.classList.remove('active-link')
+        this.$refs.values.classList.add('active-link')
+    } else if(ref === "contact") {
+        this.$refs.home.classList.remove('active-link')
+        this.$refs.contact.classList.add('active-link')
+    }
   },
 
   beforeDestroy() {
@@ -161,5 +181,13 @@ import debounce from 'lodash/debounce';
 
 .scroll-header .nav__logo{
     color: $--first-color;
+}
+
+.active-link {
+    background: linear-gradient(101deg,
+                hsl(228, 66%, 53%),
+                hsl(228, 66%, 47%));
+    color: #fff;
+    box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
 }
 </style>
