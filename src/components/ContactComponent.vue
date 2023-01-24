@@ -1,7 +1,7 @@
 <template>
     <div class="contact section" ref="contact">
         <div class="contact__container container grid">
-            <div class="contact__images">
+            <div class="contact__images" v-scroll-reveal.reset="{ delay: 250 }">
                 <div class="contact__orbe"></div>
 
                 <div class="contact__img">
@@ -10,7 +10,7 @@
             </div>
 
             <div class="contact__content">
-                <div class="contact__data">
+                <div class="contact__data" v-scroll-reveal.reset="{ delay: 250 }">
                     <span class="section__subtitle">Contact Us</span>
                     <h2 class="section__title">
                         Easy to Contact Us<span>.</span>
@@ -20,9 +20,9 @@
                     </p>
                 </div>
 
-                <div class="contact__card">
+                <div class="contact__card" v-scroll-reveal.reset="{ delay: 350 }">
                     <div class="contact__card-box">
-                        <div class="contact__card-info">
+                        <div class="contact__card-info" >
                             <i class='bx bxs-phone-call' ></i>
                             <div>
                                 <h3 class="contact__card-title">
@@ -114,6 +114,7 @@
 }
 
 .contact__container {
+    margin-top: 3rem;
     row-gap: 2rem;
     margin-bottom: 6rem;
 }

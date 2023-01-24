@@ -1,11 +1,11 @@
 <template>
   <div class="section popular residencies" ref="popular">
     <div class="container">
-      <span class="section__subtitle"> Best Choice </span>
-      <h2 class="section__title">Popular Residencies</h2>
+      <span class="section__subtitle" v-scroll-reveal.reset="{ delay: 250 }"> Best Choice </span>
+      <h2 class="section__title" v-scroll-reveal.reset="{ delay: 350 }">Popular Residencies</h2>
 
       <div
-        class="popular__container"
+        class="popular__container" v-scroll-reveal.reset="{ delay: 550 }"
       >
         <div>
           <article class="popular__card">

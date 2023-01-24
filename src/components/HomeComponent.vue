@@ -2,17 +2,17 @@
   <div class="home section" ref="home">
     <div class="home__container container grid">
       <div class="home__data">
-        <h1 class="home__title">
+        <h1 class="home__title" v-scroll-reveal.reset="{ delay: 250 }">
           Discover <br />
           Most Suitable <br />
           Property
         </h1>
-        <p class="home__description">
+        <p class="home__description" v-scroll-reveal.reset="{ delay: 250 }">
           Find a variety of properties that suit you very easily, forget all
           difficulties in finding a residence for you
         </p>
 
-        <form action="" class="home__search">
+        <form action="" class="home__search" v-scroll-reveal.reset="{ delay: 350 }">
           <i class="bx bxs-map"></i>
           <input
             type="search"
@@ -22,7 +22,7 @@
           <button class="button">Search</button>
         </form>
 
-        <div class="home__value">
+        <div class="home__value" v-scroll-reveal.reset="{ delay: 450 }">
           <div>
             <h1 class="home__value-number">9k <span>+</span></h1>
             <span class="home__value-description">
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div class="home__images">
+      <div class="home__images" v-scroll-reveal.reset="{ delay: 450 }">
         <div class="home__orbe"></div>
 
         <div class="home__img">
@@ -199,7 +199,7 @@ export default {
   }
 
   .home__container {
-    padding-top: 5rem;
+    padding-top: 3rem;
     column-gap: 2rem;
   }
 
@@ -231,7 +231,7 @@ export default {
 
 @media screen and (min-width: 1040px) {
   .home__container {
-    column-gap: 12rem;
+    column-gap: 8rem;
     padding-left: 10rem;
     padding-right: 10rem;
   }

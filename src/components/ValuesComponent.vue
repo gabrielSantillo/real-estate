@@ -1,16 +1,16 @@
 <template>
   <div class="value section" ref="value">
     <div class="value__container container grid">
-      <div class="value__images">
+      <div class="value__images" v-scroll-reveal.reset="{ delay: 250 }">
         <div class="value__orbe"></div>
 
-        <div class="value__img">
+        <div class="value__img" >
           <img src="@/img/value.jpg" alt="" />
         </div>
       </div>
 
       <div class="value__content">
-        <div class="value__data">
+        <div class="value__data" v-scroll-reveal.reset="{ delay: 350 }">
           <span class="section__subtitle">Our Value</span>
           <h2 class="section__title">Value We Give To You<span>.</span></h2>
           <p class="value__description">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="value__accordion">
-          <div class="value__accordion-item">
+          <div class="value__accordion-item" v-scroll-reveal.reset="{ delay: 450 }">
             <header
               class="value__accordion-header"
               ref="one"
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <div class="value__accordion-item">
+          <div class="value__accordion-item" v-scroll-reveal.reset="{ delay: 550 }">
             <header
               class="value__accordion-header"
               @click="is_active_two = !is_active_two"
@@ -67,7 +67,7 @@
             </div>
           </div>
 
-          <div class="value__accordion-item">
+          <div class="value__accordion-item" v-scroll-reveal.reset="{ delay: 650 }">
             <header
               class="value__accordion-header"
               @click="is_active_three = !is_active_three"
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-          <div class="value__accordion-item">
+          <div class="value__accordion-item" v-scroll-reveal.reset="{ delay: 750 }">
             <header
               class="value__accordion-header"
               @click="is_active_four = !is_active_four"
