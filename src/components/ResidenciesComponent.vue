@@ -87,6 +87,13 @@ export default {
   padding: 1rem 0 5rem;
 }
 
+.popular__container div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  column-gap: 32px;
+  justify-content: center;
+}
+
 .popular__card {
   width: 290px;
   background-color: $--container-color;
@@ -110,19 +117,23 @@ export default {
   font-size: $--h2-font-size;
   color: $--text-color;
   margin-bottom: 0.25rem;
+  padding: 0 1rem;
 }
 
 .popular__price span {
   color: $--second-color;
+  
 }
 
 .popular__title {
   font-size: $--h3-font-size;
   margin-bottom: 0.75rem;
+  padding: 0 1rem;
 }
 
 .popular__description {
   font-size: $--small-font-size;
+  padding: 0 1rem;
 }
 
 .popular__card:hover {
