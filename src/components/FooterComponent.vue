@@ -89,7 +89,7 @@
 
         <div class="footer__info container">
             <span class="footer__copy">
-                All rights reserved
+                Gabriel Santillo <br>All rights reserved
             </span>
 
             <div class="footer__privacy">

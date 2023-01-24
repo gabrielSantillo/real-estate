@@ -76,7 +76,7 @@ input, button {
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -166,6 +166,7 @@ input, button {
 }
 
 @media screen and (min-width: 1024px) {
+
   .section {
     padding: 7.5rem 0 10rem;
   }
@@ -176,12 +177,6 @@ input, button {
 
   .section__subtitle {
     font-size: $--normal-font-size;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  body {
-    zoom: 1.15;
   }
 }
 

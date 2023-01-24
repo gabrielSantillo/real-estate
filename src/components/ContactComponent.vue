@@ -261,10 +261,4 @@
     }
 }
 
-@media screen and (min-width: 1040px) {
-  .contact__container {
-    column-gap: 12rem;
-    margin-left: 10rem;
-  }
-}
 </style>
