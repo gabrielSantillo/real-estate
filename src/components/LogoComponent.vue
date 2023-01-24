@@ -1,19 +1,19 @@
 <template>
     <div class="logos section">
         <div class="logos__container container grid">
-            <div class="logos__img">
+            <div class="logos__img" v-scroll-reveal.reset="{ delay: 550, origin: 'left' }">
                 <img src="@/img/logo1.png" alt="">
             </div>
 
-            <div class="logos__img">
+            <div class="logos__img" v-scroll-reveal.reset="{ delay: 250, origin: 'left' }">
                 <img src="@/img/logo2.png" alt="">
             </div>
 
-            <div class="logos__img">
+            <div class="logos__img" v-scroll-reveal.reset="{ delay: 250, origin: 'right' }">
                 <img src="@/img/logo3.png" alt="">
             </div>
 
-            <div class="logos__img">
+            <div class="logos__img" v-scroll-reveal.reset="{ delay: 550, origin: 'right' }">
                 <img src="@/img/logo4.png" alt="">
             </div>
         </div>
