@@ -110,7 +110,7 @@ export default {
 }
 
 .popular__data {
-  padding: 0 1rem 0 1rem;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .popular__price {
@@ -133,7 +133,8 @@ export default {
 
 .popular__description {
   font-size: $--small-font-size;
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
 }
 
 .popular__card:hover {
@@ -152,18 +153,6 @@ export default {
 
   .popular__data {
     padding: 0 .25rem 0 .75rem;
-  }
-
-  .popular__price {
-    font-size: 1.75rem;
-  }
-
-  .popular__title {
-    font-size: 1.5rem;
-  }
-
-  .popular__description {
-    font-size: 1rem;
   }
 }
 </style>
