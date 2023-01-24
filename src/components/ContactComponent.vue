@@ -261,4 +261,12 @@
     }
 }
 
+
+@media screen and (min-width: 1040px) {
+    .contact__container {
+            padding-left: 10rem;
+    padding-right: 10rem;
+    }
+}
+
 </style>

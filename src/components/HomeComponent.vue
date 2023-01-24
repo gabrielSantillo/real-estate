@@ -232,6 +232,8 @@ export default {
 @media screen and (min-width: 1040px) {
   .home__container {
     column-gap: 12rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 }
 </style>
