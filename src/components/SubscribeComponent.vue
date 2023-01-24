@@ -57,4 +57,26 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .subscribe__container {
+        padding: 4rem 10rem 4.5rem;
+        border-radius: 2rem;
+        border: 12px solid $--first-color-light;
+    }
+
+    .subscribe__title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subscribe__description {
+        font-size: $--normal-font-size;
+        padding: 0 8rem;
+    }
+
+    .subscribe__button {
+        font-size: $--normal-font-size;
+    }
+}
+
 </style>

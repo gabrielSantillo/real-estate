@@ -21,7 +21,7 @@ import SubscribeComponent from './components/SubscribeComponent.vue'
 @import '@/scss/variables.scss';
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   :root {
   --biggest-font-size: 4rem;
   --h1-font-size: 2.25rem;
@@ -165,5 +165,18 @@ input, button {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 7.5rem 0 10rem;
+  }
+
+  .section__title {
+    font-size: 3.75rem;
+  }
+
+  .section__subtitle {
+    font-size: $--normal-font-size;
+  }
+}
 
 </style>

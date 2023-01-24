@@ -224,4 +224,40 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .contact__container {
+        align-items: flex-start;
+        column-gap: 5rem;
+    }
+
+    .contact__orbe {
+        width: 501px;
+        height: 641px;
+        border-radius: 258px 258px 16px 16px;
+    }
+
+    .contact__img {
+        width: 461px;
+        height: 601px;
+        border-radius: 238px 238px 12px 12px;
+    }
+
+    .contact__img img {
+        max-width: initial;
+        width: 490px;
+    }
+
+    .contact__description {
+        font-size: $--normal-font-size;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact__card {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .contact__card-box {
+        padding: 28px 1.5rem 1.5rem;
+    }
+}
 </style>

@@ -210,4 +210,29 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+
+
+    .footer__title {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__links {
+        row-gap: 1rem;
+    }
+
+    .footer__info  {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__copy {
+        font-size: 1rem;
+    }
+
+    .footer__privacy a {
+        font-size: 1rem;
+    }
+}
+
 </style>

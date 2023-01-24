@@ -54,4 +54,10 @@
         justify-content: center;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .logos__img img {
+        height: 100px;
+    }
+}
 </style>

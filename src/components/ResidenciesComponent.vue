@@ -66,29 +66,6 @@
         </div>
       </div>
     </div>
-
-    <v-carousel v-model="model">
-    <v-carousel-item
-      v-for="(color, i) in colors"
-      :key="color"
-    >
-      <v-sheet
-        :color="color"
-        height="100%"
-        tile
-      >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
-        >
-          <div class="text-h2">
-            Slide {{ i + 1 }}
-          </div>
-        </v-row>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
   </div>
 </template>
 
@@ -151,5 +128,31 @@ export default {
 .popular__card:hover {
   cursor: pointer;
   transform: scale(1.025);
+}
+
+@media screen and (min-width: 1024px) {
+  .popular__container {
+    padding-top: 3rem;
+  }
+
+  .popular__card {
+    width: 320px;
+  }
+
+  .popular__data {
+    padding: 0 .25rem 0 .75rem;
+  }
+
+  .popular__price {
+    font-size: 1.75rem;
+  }
+
+  .popular__title {
+    font-size: 1.5rem;
+  }
+
+  .popular__description {
+    font-size: 1rem;
+  }
 }
 </style>

@@ -223,4 +223,46 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .value__container {
+        align-items: flex-start;
+        column-gap: 5rem;
+    }
+
+    .value__orbe {
+        width: 501px;
+        height: 641px;
+        border-radius: 258px 258px 16px 16px;
+    }
+
+    .value__img {
+        width: 461px;
+        height: 601px;
+        border-radius: 238px 238px 12px 12px;
+    }
+
+    .value__img img{
+        max-width: initial;
+        width: 490px;
+    }
+
+    .value__description {
+        font-size: $--normal-font-size;
+        margin-bottom: 2.5rem;
+    }
+
+    .value__accordion-title {
+        font-size: $--normal-font-size;
+    }
+
+    .value__accordion-item {
+        padding: 1.25rem 1.25rem 1.25rem 1rem;
+    }
+
+    .value__accordion-description {
+        padding-bottom: 1rem;
+        font-size: $--small-font-size;
+    }
+}
+
 </style>
