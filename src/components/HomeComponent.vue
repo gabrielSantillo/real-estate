@@ -227,6 +227,12 @@ export default {
     border-radius: 236px 236px 12px 12px;
     bottom: -2.5rem;
   }
+}
 
+@media screen and (min-width: 1040px) {
+  .home__container {
+    column-gap: 12rem;
+    margin-left: 10rem;
+  }
 }
 </style>

@@ -79,4 +79,10 @@
     }
 }
 
+@media screen and (min-width: 1040px) {
+    .subscribe__container {
+        margin-left: 10rem;
+    }
+}
+
 </style>

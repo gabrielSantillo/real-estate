@@ -60,4 +60,10 @@
         height: 100px;
     }
 }
+
+@media screen and (min-width: 1040px) {
+    .logos__container {
+      margin: auto;
+    }
+}
 </style>

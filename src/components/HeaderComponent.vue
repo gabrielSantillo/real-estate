@@ -240,4 +240,10 @@ export default {
     color: $--first-color;
   }
 }
+
+@media screen and (min-width: 1040px) {
+    .nav__button {
+        margin-right: -10rem;
+    }
+}
 </style>

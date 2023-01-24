@@ -179,4 +179,10 @@ input, button {
   }
 }
 
+@media screen and (min-width: 1600px) {
+  body {
+    zoom: 1.15;
+  }
+}
+
 </style>
