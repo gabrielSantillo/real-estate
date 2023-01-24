@@ -197,4 +197,17 @@
     column-gap: 1.25rem;
 }
 
+@media screen and (min-width: 576px) {
+    .footer__content {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width: 767px) {
+    .footer__container {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+    }
+}
+
 </style>

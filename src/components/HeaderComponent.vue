@@ -190,4 +190,12 @@ import cookies from "vue-cookies"
     color: #fff;
     box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
 }
+
+@media screen and (min-width: 576px) {
+  .nav__menu {
+    width: 342px;
+  }
+}
+
+
 </style>

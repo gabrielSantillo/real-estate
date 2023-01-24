@@ -150,7 +150,7 @@
 .contact__card {
     display: grid;
     grid-template-columns: repeat(1, 180px);
-    row-gap: 1.25rem;
+    gap: 1.25rem 0.75rem;
     justify-content: center;
 }
 
@@ -204,6 +204,24 @@
 
 .contact__card-box:hover {
     box-shadow: 0 8px 24px rgba(247, 245, 248, 0.1);
+}
+
+@media screen and (min-width: 576px) {
+    .contact__card {
+    grid-template-columns: repeat(2, 192px);
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+    .contact__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .contact__images {
+        order: 1;
+    }
 }
 
 </style>

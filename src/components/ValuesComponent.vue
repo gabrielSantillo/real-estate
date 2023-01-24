@@ -216,4 +216,11 @@
     transition: all .25s ease;
 }
 
+@media screen and (min-width: 767px) {
+    .value__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
 </style>

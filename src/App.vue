@@ -2,6 +2,7 @@
   <div id="app">
     <header-component></header-component>
     <router-view/>
+    <subscribe-component></subscribe-component>
     <footer-component></footer-component>
   </div>
 </template>
@@ -9,8 +10,9 @@
 <script>
 import FooterComponent from './components/FooterComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
+import SubscribeComponent from './components/SubscribeComponent.vue'
     export default {
-  components: { HeaderComponent, FooterComponent },
+  components: { HeaderComponent, FooterComponent, SubscribeComponent },
         
     }
 </script>
@@ -140,6 +142,7 @@ input, button {
   background-color: hsl(228, 8%, 54%);
 }
 
+/* small devices */
 @media screen and (max-width: 375px) {
   .container {
     margin-left: 1rem;
@@ -154,5 +157,13 @@ input, button {
     padding-bottom: 0;
   }
 }
+
+/* medium devices */
+@media screen and (min-width: 576px) {
+  .home__search {
+    width: 412px;
+  }
+}
+
 
 </style>

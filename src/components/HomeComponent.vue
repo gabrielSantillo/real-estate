@@ -169,4 +169,19 @@ import LogoComponent from './LogoComponent.vue'
     box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
+@media screen and (min-width: 767px) {
+    .home__container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 2rem;
+    }
+
+    .home__orbe {
+        align-self: flex-end;
+    }
+
+    .home__data {
+        padding-bottom: 2rem;
+    }
+}
+
 </style>

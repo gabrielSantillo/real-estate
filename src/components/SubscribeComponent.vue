@@ -51,4 +51,10 @@
     background-color: $--first-color;
 }
 
+@media screen and (min-width: 767px) {
+    .subscribe__container {
+        padding: 3rem 13rem;
+    }
+}
+
 </style>

@@ -47,4 +47,11 @@
 .logos__img img:hover {
     opacity: .6;
 }
+
+@media screen and (min-width: 767px) {
+    .logos__container {
+        grid-template-columns: repeat(4, max-content);
+        justify-content: center;
+    }
+}
 </style>
