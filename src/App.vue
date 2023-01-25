@@ -2,7 +2,6 @@
   <div id="app">
     <header-component></header-component>
     <router-view/>
-    <subscribe-component></subscribe-component>
     <footer-component></footer-component>
   </div>
 </template>
@@ -10,9 +9,8 @@
 <script>
 import FooterComponent from './components/FooterComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
-import SubscribeComponent from './components/SubscribeComponent.vue'
     export default {
-  components: { HeaderComponent, FooterComponent, SubscribeComponent },
+  components: { HeaderComponent, FooterComponent },
         
     }
 </script>
@@ -168,7 +166,7 @@ input, button {
 @media screen and (min-width: 1024px) {
 
   .section {
-    padding: 7.5rem 0 10rem;
+    padding: 5rem 0 7.5rem;
   }
 
   .section__title {
