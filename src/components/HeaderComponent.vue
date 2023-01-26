@@ -1,7 +1,7 @@
 <template>
   <div class="header" ref="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo">
+      <a href="#" class="nav__logo" ref="home" @click="go_to('')">
         Real Estate <i class="bx bxs-home-alt-2"></i>
       </a>
 
