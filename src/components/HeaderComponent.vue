@@ -76,17 +76,37 @@ export default {
     window.addEventListener("scroll", this.handleDebouncedScroll);
 
     let ref = cookies.get("ref");
-    if (ref === "residencies") {
-      this.$refs.home.classList.remove("active-link");
-      this.$refs.residencies.classList.add("active-link");
-    } else if (ref === "values") {
-      this.$refs.home.classList.remove("active-link");
-      this.$refs.values.classList.add("active-link");
-    } else if (ref === "contact") {
-      this.$refs.home.classList.remove("active-link");
-      this.$refs.contact.classList.add("active-link");
-    } else if(ref === "subscribe") {
-      this.$refs.home.classList.remove("active-link");
+    let home_off = cookies.get("turn_home_off");
+    if (home_off === "1") {
+      if (ref === "residencies") {
+        this.$refs.home.classList.remove("active-link");
+        this.$refs.residencies.classList.remove("active-link");
+      } else if (ref === "values") {
+        this.$refs.home.classList.remove("active-link");
+        this.$refs.values.classList.remove("active-link");
+      } else if (ref === "contact") {
+        this.$refs.home.classList.remove("active-link");
+        this.$refs.contact.classList.remove("active-link");
+      } else if (ref === "subscribe") {
+        this.$refs.home.classList.remove("active-link");
+      } else if (ref === "home") {
+        this.$refs.home.classList.remove("active-link");
+      }
+
+      cookies.remove("turn_home_off")
+    } else {
+      if (ref === "residencies") {
+        this.$refs.home.classList.remove("active-link");
+        this.$refs.residencies.classList.add("active-link");
+      } else if (ref === "values") {
+        this.$refs.home.classList.remove("active-link");
+        this.$refs.values.classList.add("active-link");
+      } else if (ref === "contact") {
+        this.$refs.home.classList.remove("active-link");
+        this.$refs.contact.classList.add("active-link");
+      } else if (ref === "subscribe") {
+        this.$refs.home.classList.remove("active-link");
+      }
     }
   },
 
@@ -240,6 +260,4 @@ export default {
     color: $--first-color;
   }
 }
-
-
 </style>

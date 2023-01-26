@@ -18,6 +18,7 @@ export default {
     go_to() {
       this.$router.push(`/subscribe`);
       cookies.set("turn_home_off", 1)
+      location.reload()
     }
   },
 };
