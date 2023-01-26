@@ -76,9 +76,7 @@ export default {
     window.addEventListener("scroll", this.handleDebouncedScroll);
 
     let ref = cookies.get("ref");
-    if (ref === "home") {
-      this.$refs.home.classList.add("active-link");
-    } else if (ref === "residencies") {
+    if (ref === "residencies") {
       this.$refs.home.classList.remove("active-link");
       this.$refs.residencies.classList.add("active-link");
     } else if (ref === "values") {
@@ -87,6 +85,8 @@ export default {
     } else if (ref === "contact") {
       this.$refs.home.classList.remove("active-link");
       this.$refs.contact.classList.add("active-link");
+    } else if(ref === "subscribe") {
+      this.$refs.home.classList.remove("active-link");
     }
   },
 

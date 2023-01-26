@@ -6,13 +6,21 @@
         Subscribe and find super attractive price quotes from us. Find your
         residence soon.
       </p>
-      <a class="button subscribe__button">Get Started</a>
+      <a class="button subscribe__button" @click="go_to">Get Started</a>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import cookies from "vue-cookies"
+export default {
+  methods: {
+    go_to() {
+      this.$router.push(`/subscribe`);
+      cookies.set("turn_home_off", 1)
+    }
+  },
+};
 </script>
 
 <style lang="scss" scoped>
