@@ -18,8 +18,9 @@
             type="search"
             placeholder="Search by location"
             class="home__search-input"
+            ref="search"
           />
-          <button class="button">Search</button>
+          <button class="button" @click="make_search">Search</button>
         </form>
 
         <div class="home__value" v-scroll-reveal.reset="{ delay: 450 }">
@@ -63,9 +64,51 @@
 </template>
 
 <script>
+import axios from "axios";
+import cookies from "vue-cookies";
 import LogoComponent from "./LogoComponent.vue";
 export default {
   components: { LogoComponent },
+
+  methods: {
+    make_search() {
+      let search = this.$refs[`search`][`value`]
+      search = search[0].toLowerCase() + search.substring(1);
+      let id = undefined
+
+      if(search === "calgary") {
+        id = 1
+      } else if(search === "vancouver") {
+        id = 2
+      } else if(search === "toronto") {
+        id = 3
+      }
+       else {
+        alert('Please, chose between Calgary, Vancouver or Toronto.')
+        return
+       }
+      
+      axios
+        .request({
+          url: `http://127.0.0.1:5000/api/residencies`,
+          /* sending this data as the user information */
+          params: {
+            city_id: id,
+          },
+        })
+        .then((response) => {
+          response
+          let city = JSON.stringify(response['data'])
+          cookies.set('city', city)
+          this.$router.push('/residencies')
+        })
+        .catch((error) => {
+          error;
+          /* on failure show the user a message */
+          alert(`Sorry, an error have occured. Try again.`);
+        });
+    }
+  },
 };
 </script>
 
