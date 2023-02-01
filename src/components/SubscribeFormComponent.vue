@@ -16,13 +16,28 @@
                 <div>
                     <div class="form__inputs">
                         <div v-scroll-reveal.reset="{ delay: 350 }">
+                            <label for="" class="form__label">First Name</label>
+                            <input type="text" required placeholder="Enter your first name" class="form__input">
+                        </div>
+
+                        <div v-scroll-reveal.reset="{ delay: 450 }">
+                            <label for="" class="form__label">Last Name</label>
+                            <input type="text" required placeholder="Enter your last name" class="form__input">
+                        </div>
+
+                        <div v-scroll-reveal.reset="{ delay: 550 }">
                             <label for="" class="form__label">Email</label>
                             <input type="email" required placeholder="Enter Your email address" class="form__input">
                         </div>
 
-                        <div v-scroll-reveal.reset="{ delay: 450 }">
-                            <label for="" class="form__label">Full Name</label>
-                            <input type="text" required placeholder="Enter your full name" class="form__input">
+                        <div v-scroll-reveal.reset="{ delay: 650 }">
+                            <label for="" class="form__label">Phone number</label>
+                            <input type="number" required placeholder="Enter your phone number" class="form__input">
+                        </div>
+
+                        <div v-scroll-reveal.reset="{ delay: 750 }">
+                            <label for="" class="form__label">Budget</label>
+                            <input type="number" required placeholder="Enter your budget" class="form__input">
                         </div>
                     </div>
                 </div>
