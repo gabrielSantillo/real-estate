@@ -8,14 +8,10 @@
 <script>
 import HomeComponent from '@/components/HomeComponent.vue'
 import SubscribeComponent from '@/components/SubscribeComponent.vue'
-
 export default {
   components: { HomeComponent, SubscribeComponent },
-
 }
 </script>
 
 <style lang="scss">
-
-
 </style>
