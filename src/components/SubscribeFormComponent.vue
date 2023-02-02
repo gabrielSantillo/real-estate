@@ -22,6 +22,7 @@
                 required
                 placeholder="Enter your first name"
                 class="form__input"
+                ref="first_name"
               />
             </div>
 
@@ -32,6 +33,7 @@
                 required
                 placeholder="Enter your last name"
                 class="form__input"
+                ref="last_name"
               />
             </div>
 
@@ -42,6 +44,7 @@
                 required
                 placeholder="Enter Your email address"
                 class="form__input"
+                ref="email"
               />
             </div>
 
@@ -52,6 +55,7 @@
                 required
                 placeholder="Enter your phone number"
                 class="form__input"
+                ref="phone_number"
               />
             </div>
 
@@ -62,6 +66,7 @@
                 required
                 placeholder="Enter your budget"
                 class="form__input"
+                ref="budget"
               />
             </div>
             <div v-scroll-reveal.reset="{ delay: 750 }">
@@ -92,16 +97,65 @@
           </div>
         </div>
 
-        <div class="form__buttons" v-scroll-reveal.reset="{ delay: 550 }">
-          <button class="form__button">Subscribe</button>
+        <div class="form__buttons" v-scroll-reveal.reset="{ delay: 850 }">
+          <button class="form__button" @click="subscribe">Subscribe</button>
         </div>
       </form>
     </div>
+
+    <v-snackbar v-model="snackbar" :timeout="timeout">
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data() {
+    return {
+      snackbar: false,
+      text: "You have successfully subscribed!",
+      timeout: 5000,
+    };
+  },
+  methods: {
+    subscribe() {
+      axios
+        .request({
+          url: `http://127.0.0.1:5000/api/client`,
+          method: `POST`,
+          data: {
+            email: this.$refs[`email`][`value`],
+            preferable_city: document.querySelector(
+              'input[name="city"]:checked'
+            ).value,
+            first_name: this.$refs[`first_name`][`value`],
+            last_name: this.$refs[`last_name`][`value`],
+            phone_number: this.$refs[`phone_number`][`value`],
+            budget: parseFloat(this.$refs[`budget`][`value`]),
+          },
+        })
+        .then((response) => {
+          this.snackbar = true
+          response;
+        })
+        .catch((error) => {
+          error;
+        });
+    },
+
+    test() {
+      alert("hiiii");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
