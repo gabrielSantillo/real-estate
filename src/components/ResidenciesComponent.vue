@@ -1,31 +1,55 @@
 <template>
   <div class="section popular residencies" ref="popular">
     <div class="container">
-      <span class="section__subtitle" v-scroll-reveal.reset="{ delay: 250, origin: 'right' }"> {{city_name}} </span>
-      <h2 class="section__title" v-scroll-reveal.reset="{ delay: 350, origin: 'left' }">Popular Residencies</h2>
+      <span
+        class="section__subtitle"
+        v-scroll-reveal.reset="{ delay: 250, origin: 'right' }"
+      >
+        {{ city_name }}
+      </span>
+      <h2
+        class="section__title"
+        v-scroll-reveal.reset="{ delay: 350, origin: 'left' }"
+      >
+        Popular Residencies
+      </h2>
 
       <div
-        class="popular__container" v-scroll-reveal.reset="{ delay: 550, origin: 'bottom' }"
+        class="popular__container"
+        v-scroll-reveal.reset="{ delay: 550, origin: 'bottom' }"
       >
         <div>
-          <article class="popular__card" v-for="(residencie, index) in residencies" :key="index">
-            <img src="@/img/popular1.jpg" alt="" class="popular__img" />
+          <article
+            class="popular__card"
+            v-for="(residencie, index) in residencies"
+            :key="index"
+          >
+            <img :src="residencie['image']" alt="" class="popular__img" />
 
             <div class="popular__data">
-              <h2 class="popular__price"><span>$</span>{{residencie['price']}}</h2>
-              <h3 class="popular__title">{{residencie['sqft']}} sqft</h3>
+              <h2 class="popular__price">
+                <span>$</span>{{ residencie["price"] }}
+              </h2>
+              <h3 class="popular__title">{{ residencie["sqft"] }} sqft</h3>
               <p class="popular__description">
-                {{residencie['address']}}
+                {{ residencie["address"] }}
               </p>
               <p class="popular__description">
-                Category: {{residencie['category'][0].toUpperCase() + residencie['category'].substring(1)}}
+                Category:
+                {{
+                  residencie["category"][0].toUpperCase() +
+                  residencie["category"].substring(1)
+                }}
               </p>
               <p class="popular__description">
-                City: {{residencie['city'][0].toUpperCase() + residencie['city'].substring(1)}}
+                City:
+                {{
+                  residencie["city"][0].toUpperCase() +
+                  residencie["city"].substring(1)
+                }}
               </p>
             </div>
           </article>
-
         </div>
       </div>
     </div>
@@ -33,28 +57,57 @@
 </template>
 
 <script>
-import cookies from "vue-cookies"
-import axios from "axios"
+import cookies from "vue-cookies";
+import axios from "axios";
 export default {
+  methods: {
+    get_files(residencies) {
+      // looping trough the items list to make an axios request for each item
+      for (let i = 0; i < residencies.length; i++) {
+        axios
+          .request({
+            // Standard URL and params
+            url: `http://127.0.0.1:5000/api/residencies-images`,
+            params: {
+              file_name: residencies[i]["image"],
+            },
+            // This lets axios know to expect a blob (one way to represent a file)
+            responseType: "blob",
+          })
+          .then((response) => {
+            // Cool built in function that allows us to take file data and create a URL for it
+            // This is so we can use it for things like image src and such
+            let src = URL.createObjectURL(response["data"]);
+            /* adding this paths since they strings to the images_src array to then, loop through this array and print the images onto the page */
+            this.residencies[i]["image"] = src;
+          })
+          .catch((error) => {
+            error;
+          });
+      }
+    },
+  },
   data() {
     return {
       residencies: undefined,
-      city_name: "Best Choice"
-    }
+      city_name: "Best Choice",
+    };
   },
 
-  mounted () {
-    if(cookies.get('city')) {
-      this.residencies = cookies.get('city');
-      this.city_name = this.residencies[0]['city'][0].toUpperCase() + this.residencies[0]['city'].substring(1)
-    }
-    else {
+  mounted() {
+    if (cookies.get("city")) {
+      this.residencies = cookies.get("city");
+      this.city_name =
+        this.residencies[0]["city"][0].toUpperCase() +
+        this.residencies[0]["city"].substring(1);
+    } else {
       axios
         .request({
           url: `http://127.0.0.1:5000/api/residencies`,
         })
         .then((response) => {
-          this.residencies = response['data']
+          this.residencies = response["data"];
+          this.get_files(this.residencies)
         })
         .catch((error) => {
           error;
@@ -113,7 +166,6 @@ export default {
 
 .popular__price span {
   color: $--second-color;
-  
 }
 
 .popular__title {
@@ -143,7 +195,7 @@ export default {
   }
 
   .popular__data {
-    padding: 0 .25rem 0 .75rem;
+    padding: 0 0.25rem 0 0.75rem;
   }
 }
 </style>
