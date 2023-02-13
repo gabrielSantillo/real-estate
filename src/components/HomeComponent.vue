@@ -64,7 +64,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import cookies from "vue-cookies";
 import LogoComponent from "./LogoComponent.vue";
 export default {
@@ -74,39 +73,25 @@ export default {
     make_search() {
       let search = this.$refs[`search`][`value`]
       search = search[0].toLowerCase() + search.substring(1);
-      let id = undefined
 
       if(search === "calgary") {
-        id = 1
+        cookies.set('city_id', 1)
+        cookies.set("ref", `residencies`);
+        this.$router.push(`/residencies`);
       } else if(search === "vancouver") {
-        id = 2
+        cookies.set("ref", `residencies`);
+        cookies.set('city_id', 2)
+        this.$router.push(`/residencies`);
       } else if(search === "toronto") {
-        id = 3
+        cookies.set("ref", `residencies`);
+        cookies.set('city_id', 3)
+        this.$router.push(`/residencies`);
       }
        else {
         alert('Please, chose between Calgary, Vancouver or Toronto.')
         return
        }
-      
-      axios
-        .request({
-          url: `http://127.0.0.1:5000/api/residencies`,
-          /* sending this data as the user information */
-          params: {
-            city_id: id,
-          },
-        })
-        .then((response) => {
-          response
-          let city = JSON.stringify(response['data'])
-          cookies.set('city', city)
-          this.$router.push('/residencies')
-        })
-        .catch((error) => {
-          error;
-          /* on failure show the user a message */
-          alert(`Sorry, an error have occured. Try again.`);
-        });
+
     }
   },
 };

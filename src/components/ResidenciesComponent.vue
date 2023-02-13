@@ -7,12 +7,7 @@
       >
         {{ city_name }}
       </span>
-      <h2
-        class="section__title"
-        v-scroll-reveal.reset="{ delay: 350, origin: 'left' }"
-      >
-        Popular Residencies
-      </h2>
+      <h2 class="section__title residencies__title">Popular Residencies</h2>
 
       <div
         class="popular__container"
@@ -95,11 +90,26 @@ export default {
   },
 
   mounted() {
-    if (cookies.get("city")) {
-      this.residencies = cookies.get("city");
-      this.city_name =
-        this.residencies[0]["city"][0].toUpperCase() +
-        this.residencies[0]["city"].substring(1);
+    if (cookies.get("city_id")) {
+      axios
+        .request({
+          url: `http://127.0.0.1:5000/api/residencies`,
+          params: {
+            city_id: `${cookies.get("city_id")}`,
+          },
+        })
+        .then((response) => {
+          this.residencies = response["data"];
+          this.get_files(this.residencies);
+          this.city_name =
+            this.residencies[0]["city"][0].toUpperCase() +
+            this.residencies[0]["city"].substring(1);
+        })
+        .catch((error) => {
+          error;
+          /* on failure show the user a message */
+          alert(`Sorry, an error have occured.`);
+        });
     } else {
       axios
         .request({
@@ -107,7 +117,7 @@ export default {
         })
         .then((response) => {
           this.residencies = response["data"];
-          this.get_files(this.residencies)
+          this.get_files(this.residencies);
         })
         .catch((error) => {
           error;
@@ -151,6 +161,9 @@ export default {
 .popular__img {
   border-radius: 1rem 1rem 0 0;
   margin-bottom: 1rem;
+  max-height: 220px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .popular__data {

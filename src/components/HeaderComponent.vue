@@ -57,6 +57,7 @@ export default {
       if (ref === "") {
         cookies.set("ref", `home`);
       } else {
+        cookies.remove('city_id')
         cookies.set("ref", `${ref}`);
       }
 
