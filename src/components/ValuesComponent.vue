@@ -136,6 +136,10 @@ export default {
   background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%);
 }
 
+.section__title {
+  color: white;
+}
+
 .value__container {
   row-gap: 3rem;
   margin-top: 3rem;

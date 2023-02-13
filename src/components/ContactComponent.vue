@@ -29,7 +29,7 @@
                                     Call
                                 </h3>
                                 <p class="contact__card-description">
-                                    555-888-9999
+                                    587-888-0975
                                 </p>
                             </div>
                         </div>
@@ -44,16 +44,16 @@
                             <i class='bx bxs-message-rounded-dots' ></i>
                             <div>
                                 <h3 class="contact__card_title">
-                                    Chat
+                                    Message
                                 </h3>
                                 <p class="contact__card-description">
-                                    555-888-9999
+                                    587-888-0975
                                 </p>
                             </div>
                         </div>
 
                         <button class="button contact__card-button">
-                            Chat Now
+                            Message Now
                         </button>
                     </div>
 
@@ -65,7 +65,7 @@
                                     Email
                                 </h3>
                                 <p class="contact__card-description">
-                                    555-888-9999
+                                    gasantillo7@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -111,6 +111,10 @@
     background: linear-gradient(170deg,
                 hsl(0, 0%, 22%) 0%,
                 hsl(0, 0%, 6%) 30%);
+}
+
+.section__title {
+    color: white;
 }
 
 .contact__container {
@@ -162,6 +166,7 @@
     padding: 1.25rem .75rem;
     border-radius: .5rem;
     transition: .3s;
+    width: 222px;
 }
 
 .contact__card-info{
@@ -209,7 +214,7 @@
 
 @media screen and (min-width: 576px) {
     .contact__card {
-    grid-template-columns: repeat(2, 192px);
+    grid-template-columns: repeat(2, 222px);
     justify-content: center;
   }
 }
@@ -254,7 +259,7 @@
     }
 
     .contact__card {
-        grid-template-columns: repeat(2, 200px);
+        grid-template-columns: repeat(2, 222px);
     }
 
     .contact__card-box {

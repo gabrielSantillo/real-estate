@@ -129,7 +129,7 @@ export default {
     subscribe() {
       axios
         .request({
-          url: `http://127.0.0.1:5000/api/client`,
+          url: `/api/client`,
           method: `POST`,
           data: {
             email: this.$refs[`email`][`value`],
@@ -149,10 +149,6 @@ export default {
         .catch((error) => {
           error;
         });
-    },
-
-    test() {
-      alert("hiiii");
     },
   },
 };

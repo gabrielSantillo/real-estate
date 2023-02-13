@@ -62,7 +62,7 @@ export default {
         axios
           .request({
             // Standard URL and params
-            url: `http://127.0.0.1:5000/api/residencies-images`,
+            url: `/api/residencies-images`,
             params: {
               file_name: residencies[i]["image"],
             },
@@ -93,7 +93,7 @@ export default {
     if (cookies.get("city_id")) {
       axios
         .request({
-          url: `http://127.0.0.1:5000/api/residencies`,
+          url: `/api/residencies`,
           params: {
             city_id: `${cookies.get("city_id")}`,
           },
@@ -113,7 +113,7 @@ export default {
     } else {
       axios
         .request({
-          url: `http://127.0.0.1:5000/api/residencies`,
+          url: `/api/residencies`,
         })
         .then((response) => {
           this.residencies = response["data"];
@@ -135,6 +135,10 @@ export default {
 .residencies {
   background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%);
   padding-bottom: 0;
+}
+
+.section__title {
+  color: white;
 }
 
 .popular__container {
