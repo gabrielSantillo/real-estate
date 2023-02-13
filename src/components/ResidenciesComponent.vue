@@ -93,7 +93,7 @@ export default {
     if (cookies.get("city_id")) {
       axios
         .request({
-          url: `/api/residencies`,
+          url: `${process.env.VUE_APP_BASE_DOMAIN}/api/residencies`,
           params: {
             city_id: `${cookies.get("city_id")}`,
           },
@@ -113,7 +113,7 @@ export default {
     } else {
       axios
         .request({
-          url: `/api/residencies`,
+          url: `${process.env.VUE_APP_BASE_DOMAIN}/api/residencies`,
         })
         .then((response) => {
           this.residencies = response["data"];
