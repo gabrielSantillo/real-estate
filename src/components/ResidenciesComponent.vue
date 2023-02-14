@@ -11,7 +11,6 @@
 
       <div
         class="popular__container"
-        v-scroll-reveal.reset="{ delay: 550, origin: 'bottom' }"
       >
         <div>
           <article
